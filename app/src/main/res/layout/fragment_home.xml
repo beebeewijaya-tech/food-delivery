@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.beebee.cookingrecipes.view.custom_view.home.HomeListView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/lightPink"
+    android:focusableInTouchMode="true"
+    android:focusable="true"
+    tools:context=".view.ui.home.HomeFragment">
+
+    <LinearLayout
+        android:id="@+id/home_header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:orientation="horizontal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:padding="@dimen/padding_20"
+        android:background="@color/colorAccent">
+
+        <EditText
+            android:id="@+id/search_bar"
+            android:theme="@style/CustomInput"
+            android:layout_width="wrap_content"
+            android:layout_weight="2"
+            android:layout_height="wrap_content"
+            android:hint="Type in what you're looking for..."
+            android:textSize="@dimen/fontSmall"
+            android:paddingBottom="@dimen/padding_20"
+            android:layout_marginRight="@dimen/margin_10"
+            android:layout_marginLeft="@dimen/margin_20"
+            />
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/profile_pic"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            tools:src="@android:color/black"
+            android:layout_marginRight="@dimen/margin_20"
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/home_header"
+        app:layout_constraintVertical_bias="0.2"
+        android:paddingBottom="50dp"
+        android:layout_marginTop="@dimen/margin_20">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/food_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margin_20"
+            tools:listitem="@layout/food_list_row"/>
+    </LinearLayout>
+</com.beebee.cookingrecipes.view.custom_view.home.HomeListView>
