@@ -1,6 +1,8 @@
 package com.beebee.cookingrecipes.model.food
 
-class FoodRoom : IFoodRoom {
+import javax.inject.Inject
+
+class FoodRoom @Inject constructor() : IFoodRoom {
     override fun createFood(food: Food, callback: () -> Unit) {
         TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
     }
